@@ -60,10 +60,27 @@ def iniciar_Notas():
     time.sleep(0.2)
     p.press('Enter')
 
+
+def salvar_Disciplina():
+    p.keyDown('Ctrl')
+    p.keyDown('Shift')
+    p.press('s')
+    p.keyUp('Ctrl')
+    p.keyUp('Shift')
+    time.sleep(0.2)
+    p.click(676, 158)
+    p.write('D:\Back\Repositorios Git\Automacao_Python\Documento')
+    p.press('Enter')
+    p.click(408, 535)
+    p.write('Disciplinas')
+    p.press('enter')
+    p.keyDown('Alt')
+    p.press('F4')
+    p.keyUp('Alt')
+
     # Inicia o programa
 
-
-# iniciar_Edge()
+    # iniciar_Edge()
 altTab()
 
 # Para selecionar o texto das disciplinas
@@ -87,6 +104,11 @@ time.sleep(0.5)
 # Colar texto copiado
 colar_Texto()
 time.sleep(0.5)
+
+# Salvar Notas
+salvar_Disciplina()
+time.sleep(0.5)
+
 # # Para abir a pasta da pos graduação
 iniciar_Explorador()
 time.sleep(0.5)
@@ -110,13 +132,13 @@ p.press('enter')
 criar_Pastas()
 altTab()
 
-p.moveTo(188, 200)
-time.sleep(0.2)
-p.tripleClick()
-copiar_Texto()
+# p.moveTo(188, 200)
+# time.sleep(0.2)
+# p.tripleClick()
+# copiar_Texto()
 
-altTab()
-time.sleep(0.3)
-p.rightClick(364, 326)
-p.press('F2')
-colar_Texto()
+# altTab()
+# time.sleep(0.3)
+# p.rightClick(364, 326)
+# p.press('F2')
+# colar_Texto()
